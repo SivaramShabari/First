@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* header styling */
+
+:root {
+    --appcolor: #004;
+    --text-color: #fff;
+}
+
+.header {
+    text-transform: uppercase;
+    background-color: var(--appcolor);
+    text-align: center;
+    padding-top: 1px;
+}
+
+#main-name-left {
+    padding-left: 10px;
+    color: var(--text-color);
+    font-size: 1.6em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    float: left;
+    padding-top: 10px;
+}
+
+#main-name-left span {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#main-name-left:hover {
+    cursor: pointer;
+    font-size: 1.7em;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    margin: 0;
+}
+
+#app_name {
+    height: 60px;
+}
+
+#ul-div {
+    margin-top: 10px;
+}
+
+#ul-header {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ul-header:last-child {
+    padding-right: 10px;
+}
+
+nav a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.8em;
+    padding: 6px;
+    border-radius: 3px;
+    margin-left: 4px;
+}
+
+nav a:hover {
+    display: block;
+    color: var(--appcolor);
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* end      of         header         styling */
+
+
+/* end        of          header          styling */
+
+
+/* end                of  header        styling */
+
+
+/* end    of         header        styling */
+
+
+/* #edit-page {
+  width: 100vw;
+  height: 92vh;
+} */
+
+#createbtn {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#create-showcase {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    background-color: var(--text-color);
+    border-radius: 7px;
+    border: solid 2px var(--appcolor);
+    margin: 10px;
+    padding: 4px;
+}
+
+#create-showcase:hover {
+    background-color: var(--appcolor);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+#ifempty {
+    padding: 10px;
+}
+
+#createlink {
+    width: 100%;
+    height: 91%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#link-add-form {
+    border-radius: 10px;
+    padding-top: 60px;
+    width: 500px;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 7px;
+    height: 400px;
+    background-color: var(--text-color);
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#edit-link {
+    width: 100%;
+    height: 91%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#link-edit-form {
+    border-radius: 10px;
+    padding-top: 60px;
+    width: 500px;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 7px;
+    height: 440px;
+    background-color: var(--text-color);
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#embed-link {
+    width: 100%;
+    height: 91%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#link-embed-form {
+    border-radius: 10px;
+    padding-top: 60px;
+    width: 500px;
+    background-color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 7px;
+    height: 440px;
+    background-color: var(--text-color);
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#embedbtn {
+    padding: 5px;
+    font-size: 1.1em;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background-color: var(--appcolor);
+    border-radius: 5px;
+    width: 60%;
+    justify-content: center;
+}
+
+#embedbtn:hover {
+    background-color: var(--text-color);
+    color: var(--appcolor);
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.forme:first-child {
+    margin-top: 60px;
+}
+
+.forme {
+    width: 92%;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 16px;
+    font-size: 1.2em;
+    border: solid 2px var(--appcolor);
+}
+
+#linkbtn {
+    padding: 5px;
+    font-size: 1.1em;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background-color: var(--appcolor);
+    border-radius: 5px;
+    width: 60%;
+    justify-content: center;
+}
+
+#linkbtn:hover {
+    background-color: var(--text-color);
+    color: var(--appcolor);
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+#editbtn {
+    padding: 5px;
+    font-size: 1.1em;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background-color: var(--appcolor);
+    border-radius: 5px;
+    width: 60%;
+    justify-content: center;
+}
+
+#editbtn:hover {
+    background-color: var(--text-color);
+    color: var(--appcolor);
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+#editdel {
+    padding: 5px;
+    font-size: 1.1em;
+    padding: 10px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background-color: var(--appcolor);
+    border-radius: 5px;
+    width: 60%;
+    justify-content: center;
+}
+
+#editdel:hover {
+    background-color: var(--text-color);
+    color: var(--appcolor);
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+#links-ul {
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.link-link {
+    margin: 10px;
+    width: 60vw;
+    border: 2px solid var(--appcolor);
+    border-radius: 9px;
+    text-align: center;
+    word-spacing: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link-link:hover {
+    background-color: var(--appcolor);
+    color: var(--text-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.link-link-yt {
+    margin: 10px;
+    width: 60vw;
+    border: 2px solid red;
+    border-radius: 9px;
+    text-align: center;
+    word-spacing: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: red;
+}
+
+.link-link-yt:hover {
+    background-color: red;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.embed-video {
+    /* padding: 10px;
+    margin: 0;
+    width: 100%;
+    height: 300px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width:600px) and (max-width:720px) {
+    .link-link {
+        font-size: 0.8em;
+    }
+    .link-link-yt {
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width:500px) and (max-width:600px) {
+    .link-link {
+        font-size: 0.6em;
+    }
+    .link-link-yt {
+        font-size: 0.6em;
+    }
+}
+
+#btndiv {
+    display: flex;
+    font-size: 0.6em;
+    justify-content: space-between;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.topbtn {
+    margin: 10px;
+    width: 20vw;
+    border: 2px solid var(--appcolor);
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 7px;
+    background-color: var(--appcolor);
+    color: var(--text-color);
+    display: inline;
+    flex-direction: row;
+}
+
+.topbtn:hover {
+    background-color: var(--text-color);
+    color: var(--appcolor);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#footer-div {
+    color: var(--text-color);
+    background: var(--appcolor);
+    position: relative;
+    bottom: -1;
+    width: 100%;
+}
+
+#close,
+#closes,
+#close-embed {
+    font-size: 2em;
+    color: var(--appcolor);
+    top: 6px;
+    right: 6px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: 6px;
+    transform: rotate(45deg);
+}
+
+#close:hover,
+#closes:hover,
+#close-embed:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#link-add-form {
+    position: relative;
+}
+
+@media (max-width:500px) {
+    .header {
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0;
+    }
+    #headers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #app_name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 70px;
+    }
+    #main-name-left {
+        color: var(--text-color);
+        font-size: 1em;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        float: left;
+        padding-top: 10px;
+    }
+    #main-name-left:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        font-size: 1em;
+    }
+    #ul-header {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        margin-left: 6px;
+        padding-right: 6px;
+        margin-bottom: 3px;
+        margin-top: 5px;
+    }
+    #ul-div {
+        margin: 0;
+    }
+    nav a {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #createbtn {
+        font-size: 0.9em;
+    }
+    #createbtn button {
+        font-size: 1em;
+    }
+    #createbtn button:hover {
+        font-size: 1em;
+    }
+    .form-- {
+        font-size: 0.6em;
+    }
+    .topbtn {
+        font-size: 1.2em;
+        padding: 4px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    #btndiv {
+        justify-content: center;
+    }
+}
+
+#alerts {
+    height: 91%;
+    width: 100%;
+    top: 10px;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#alert-box {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+    margin: 20px;
+    color: red;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="style.css">
+    <title>LinkShare Home</title>
+</head>
+
+<body>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD2zycG3uPK0PD3guHW1NNW_mIH5y5vgUw",
+            authDomain: "linkshare-by-shiv.firebaseapp.com",
+            projectId: "linkshare-by-shiv",
+            storageBucket: "linkshare-by-shiv.appspot.com",
+            messagingSenderId: "522934601439",
+            appId: "1:522934601439:web:ff00cf1ed29ee4f673cb6a",
+            measurementId: "G-74YS9KBDEV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+
+    <header class="header">
+        <div id='app_name'>
+            <div id='main-name-left'>Link<span> Share</span></div>
+            <nav class='header' id='nav-header'>
+                <div id='ul-div'>
+                    <ul class='header' id='ul-header'>
+                        <li class='h-list'><a id='nav_your_showcase' href="showcase.html">Your Showcase</a></li>
+                        <li class='h-list'><a id='nav_edit' href="">Edit Showcase</a></li>
+                        <li class='h-list' id='username'>
+                            <a id='headeruser' href=""></a>
+                            <div id='logout'>
+                                <img class='user-menu-' id='userimg' src='logos\profile-pic-default.jpg'>
+                                <div class='user-menu' id='gotoprofile'>My Profile</div>
+                                <div class='user-menu' id='logoutuser'>Logout</div>
+                            </div>
+                        </li>
+                        <li class='h-list'><a id='sign' href=''>Sign In</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <script src='index.js'>
+    </script>
+
+
+    <div id='login-div'>
+        <div id='login-box'>
+            <div id='close'>+</div>
+            <img id='login-img' src='logos/profile-pic-default.jpg' height="90" width="90" style="border-radius:50%;" />
+            <form id='login-form'>
+                <input placeholder='E-mail' id='email-login' type='email' class='login'></input>
+                <input placeholder='Password' id='pwd-login' type='password' class='login'></input>
+                <button type='submit' id='login-btn'>LogIn</button>
+                <div class='login' id='signup'>Not a user? <span id='signup-btn'> Sign Up<span> </div>
+    </div>
+  </div>
+
+
+  <p class='btxt' id='intro'> Welcome to link share</p>
+  <p class='btxt' id='page-description'> Post all of your links and videos and showcase them to the world.</p>
+
+  <div id='image-container'>
+    <div id='main-page-img'>
+      <a href='http://www.youtube.com/' target='_blank'> <img class='images-home' src='logos/youtube-logo.png' /></a>
+      <a href='http://www.facebook.com' target='_blank'> <img class='images-home' src='logos/facebook-logo.png' /></a>
+      <a href='http://www.instagram.com' target='_blank'> <img class='images-home' src='logos/insta-logo.jpg' /></a>
+      <a href='http://www.snapchat.com' target='_blank'> <img class='images-home' src='logos/snap-logo.jpg ' /></a>
+      <a href='http://www.linkedin.com' target='_blank'> <img class='images-home' src='logos/linkedin-logo.png ' /></a>
+      <a href='http://www.github.com' target='_blank'> <img class='images-home' src='logos/github-logo.png ' /></a>
+      <a href='http://www.reddit.com' target='_blank'> <img class='images-home' src='logos/reddit.png ' /></a>
+      <a href='http://www.twitter.com' target='_blank'> <img class='images-home' src='logos/twitter.png ' /></a>
+    </div>
+    <div class='text-home'> and what not! </div>
+
+  </div>
+</body>
+
+<footer id='footer'>
+  <div id='footer-div'>
+    <ul id='ul-footer' style='list-style-type:none; text-align:right; padding-right:20px;'>
+      <li>Learning by doing 💡 </li>
+    </ul>
+  </div>
+</footer>
+
+
+</html>

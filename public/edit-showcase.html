@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Showcase</title>
+    <meta charset=UTF-8>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="editpage.css">
+</head>
+
+<body id='bodys'>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD2zycG3uPK0PD3guHW1NNW_mIH5y5vgUw",
+            authDomain: "linkshare-by-shiv.firebaseapp.com",
+            projectId: "linkshare-by-shiv",
+            storageBucket: "linkshare-by-shiv.appspot.com",
+            messagingSenderId: "522934601439",
+            appId: "1:522934601439:web:ff00cf1ed29ee4f673cb6a",
+            measurementId: "G-74YS9KBDEV"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+
+    <header id='headers' class="header">
+        <div id='app_name'>
+            <div id='main-name-left'>Link<span> Share</span></div>
+            <nav class='header' id='nav-header'>
+                <div id='ul-div'>
+                    <ul class='header' id='ul-header' style='list-style:none;'>
+                        <li class='h-list'><a id='your_showcase' href="">Your Showcase</a></li>
+                        <li class='h-list'><a id='home' href=''>Home</a></li>
+                        <li class='h-list'>
+                            <a id='headeruser' href=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- add/edit link -->
+
+    <div id='createlink' class='form--'>
+
+        <form id='link-add-form' onsubmit="return false;">
+            <div id='close'>+</div>
+            <div style='font-size:1.6em; text-transform:uppercase ;margin: 10px; '>Add Link</div>
+            <input class='forme' id='url-name' type='text' placeholder='URL name' required></input>
+            <input class='forme' id='url-input' type='url' placeholder="enter the url" required></input>
+            <button id='linkbtn' type='submit'>Add link</button>
+        </form>
+    </div>
+
+    <div id='edit-link' class='form--'>
+        <form id='link-edit-form' onsubmit="return false;">
+            <div id='closes'>+</div>
+            <div style='font-size:1.6em; text-transform:uppercase ;margin: 10px; '>Edit Link</div>
+            <input class='forme' id='edit-name' type='text' required></input>
+            <input class='forme' id='edit-url' type='url' required></input>
+            <button class='forme' id='editbtn' type='submit'>Save Changes</button>
+            <button class='forme' id='editdel' type='button'>Delete link</button>
+
+        </form>
+    </div>
+
+    <div id='embed-link' class='form--'>
+        <form id='link-embed-form' onsubmit="return false;">
+            <div id='close-embed'>+</div>
+            <div style='font-size:1.6em; text-transform:uppercase ;margin: 10px; '>Embed Youtube Video</div>
+            <input class='forme' placeholder='Enter video title' id='embed-name' type='text' required></input>
+            <input class='forme' placeholder='Paste youtube video URL' id='embed-url' type='url' required></input>
+            <button class='forme' id='embedbtn' type='submit'>Add video</button>
+        </form>
+    </div>
+
+    <!-- end add/edit link-->
+
+
+    <!-- //if no links are present -->
+    <div id='createbtn'>
+        <div id='ifempty'>
+            You have no links to be showcased
+        </div>
+        <button id='create-showcase'>Create showcase</button>
+    </div>
+    <!-- end - - if no links are present -->
+    <div id='btndiv'>
+        <button class='topbtn' id='ex-add'>Add Link</button>
+        <button class='topbtn' id='edit-theme'>Edit Theme</button>
+        <button class='topbtn' id='embedform'>Embed Video</button>
+    </div>
+
+
+
+    <!-- display links-->
+    <div id='display-links' class='form--'>
+        <div id='link-container'>
+            <ul id='links-ul'>
+
+            </ul>
+        </div>
+    </div>
+    <!-- end display links-->
+
+    <div id='alerts'>
+        <div id='alert-box'>
+        </div>
+    </div>
+
+
+
+
+    <script src='edit-showcase.js'>
+    </script>
+</body>
+
+<!-- <footer id='footer'>
+    <div id='footer-div'>
+        <ul id='ul-footer' style='list-style-type:none; text-align:right; padding-right:20px;'>
+            <li>Just an experiment, made with ❤️ </li>
+        </ul>
+    </div>
+</footer> -->
+
+</html>

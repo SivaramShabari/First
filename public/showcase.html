@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset=UTF-8>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="editpage.css">
+</head>
+
+<body id='bodys'>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD2zycG3uPK0PD3guHW1NNW_mIH5y5vgUw",
+            authDomain: "linkshare-by-shiv.firebaseapp.com",
+            projectId: "linkshare-by-shiv",
+            storageBucket: "linkshare-by-shiv.appspot.com",
+            messagingSenderId: "522934601439",
+            appId: "1:522934601439:web:ff00cf1ed29ee4f673cb6a",
+            measurementId: "G-74YS9KBDEV"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+
+    <header class="header">
+        <div id='app_name'>
+            <div id='main-name-left'>Link<span> Share</span></div>
+            <nav class='header' id='nav-header'>
+                <div id='ul-div'>
+                    <ul class='header' id='ul-header' style='list-style:none;'>
+                        <li class='h-list'><a id='nav_edit' href="edit-showcase.html">Edit Showcase</a></li>
+                        <li class='h-list'><a id='home' href='index.html'>Home</a>
+                            <li>
+                                <li class='h-list'>
+                                    <a id='headeruser' href=""></a>
+                                </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- //if no links are present -->
+    <div id='createbtn'>
+        <div id='ifempty'>
+            User has no links to be showcased
+        </div>
+    </div>
+    <!-- end - - if no links are present -->
+
+
+
+    <!-- display links-->
+    <div id='display-links' class='form--'>
+        <div id='link-container'>
+            <ul id='links-ul'>
+
+            </ul>
+        </div>
+    </div>
+    <!-- end display links-->
+
+
+
+
+    <script src='your-showcase.js'>
+    </script>
+</body>
+
+
+
+</html>
