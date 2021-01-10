@@ -15,6 +15,19 @@
     padding-top: 1px;
 }
 
+#body-content {
+    padding-top: 60px;
+}
+
+#headers {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    height: 60px;
+    margin-bottom: 9px;
+}
+
 #main-name-left {
     padding-left: 10px;
     color: var(--text-color);
@@ -405,7 +418,7 @@ nav a:hover {
 }
 
 .topbtn:hover {
-    background-color: var(--text-color);
+    background: rgba(255, 255, 255, 0.2);
     color: var(--appcolor);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
