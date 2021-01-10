@@ -13,7 +13,24 @@ document.getElementById('headeruser').addEventListener('click', function(event) 
 document.getElementById('sign').addEventListener('click', function(event) {
     event.preventDefault();
 });
+document.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+    let prevScrollpos;
+    console.log(currentScrollPos);
+    if (screen.width < 594) {
+        if (currentScrollPos > 24) {
+            document.getElementById('main-name-left').style.display = 'none';
 
+            document.getElementById('headers').style.height = '40px';
+
+        } else {
+            document.getElementById('main-name-left').style.display = 'flex';
+            document.getElementById('headers').style.height = '68px';
+
+        }
+        prevScrollpos = currentScrollPos;
+    }
+}
 let database = firebase.database().ref();
 let auth = firebase.auth();
 auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root {
+    --appcolor: #004;
+    --text-color: #fff;
+}
+
 .header {
     text-transform: uppercase;
     background-color: var(--appcolor);
@@ -7,9 +12,17 @@
     padding-top: 1px;
 }
 
-:root {
-    --appcolor: #004;
-    --text-color: #fff;
+#headers {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    height: 60px;
+    margin-bottom: 9px;
+}
+
+#body-content {
+    padding-top: 60px;
 }
 
 #main-name-left {
@@ -47,7 +60,6 @@ body {
 #intro {
     font-size: 1.9em;
     overflow: hidden;
-    var(--text-color)-space: nowrap;
     color: #005;
     margin-left: 10px;
 }
@@ -335,24 +347,26 @@ html {
     scroll-behavior: smooth;
 }
 
-@media (max-width:500px) {
+@media (max-width:590px) {
     .header {
         font-size: 0.9em;
         margin: 0;
         padding: 0;
     }
     #headers {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: fixed;
     }
     #app_name {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 70px;
+        position: relative;
     }
     #main-name-left {
         color: var(--text-color);
@@ -375,11 +389,15 @@ html {
         justify-content: space-between;
         margin-left: 6px;
         padding-right: 6px;
-        margin-bottom: 3px;
-        margin-top: 5px;
     }
     #ul-div {
         margin: 0;
+    }
+    nav {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
     }
     nav a {
         margin-left: 5px;
