@@ -7,8 +7,17 @@
             "**/node_modules/**"
         ],
         "rewrites": [{
-            "source": "/user",
-            "destination": "/index.html"
-        }]
+                "source": "/user",
+                "destination": "/index.html"
+            },
+            {
+                "source": "/showcase/*",
+                "destination": "/showcase.html"
+            },
+            {
+                "source": "/user/*",
+                "destination": "/showcase.html"
+            }
+        ]
     }
 }
