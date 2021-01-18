@@ -1,24 +1,30 @@
 {
     "target": "main",
     "hosting": {
+        "target": "main",
         "public": "public",
-        "ignore": [
-            "firebase.json",
-            "**/.*",
-            "**/node_modules/**"
-        ],
-        "rewrites": [{
-                "source": "/user",
-                "destination": "/index.html"
-            },
-            {
-                "source": "/showcase/*",
-                "destination": "/showcase.html"
-            },
-            {
-                "source": "/user/*",
-                "destination": "/showcase.html"
-            }
-        ]
+        "hosting": {
+            "target": "main",
+
+            "public": "public",
+            "ignore": [
+                "firebase.json",
+                "**/.*",
+                "**/node_modules/**"
+            ],
+            "rewrites": [{
+                    "source": "/user",
+                    "destination": "/index.html"
+                },
+                {
+                    "source": "/showcase/*",
+                    "destination": "/showcase.html"
+                },
+                {
+                    "source": "/user/*",
+                    "destination": "/showcase.html"
+                }
+            ]
+        }
     }
 }

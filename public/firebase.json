@@ -1,5 +1,28 @@
 {
-  "database": {
-    "rules": "database.rules.json"
-  }
+    "database": {
+        "rules": "database.rules.json"
+    },
+    "hosting": {
+        "target": "main",
+
+        "public": "public",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "rewrites": [{
+                "source": "/user",
+                "destination": "/index.html"
+            },
+            {
+                "source": "/showcase/*",
+                "destination": "/showcase.html"
+            },
+            {
+                "source": "/user/*",
+                "destination": "/showcase.html"
+            }
+        ]
+    }
 }
