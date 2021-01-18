@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "linkshare-by-shiv"
+  },
+  "targets": {
+    "linkshare-by-shiv": {
+      "hosting": {
+        "main": [
+          "link-showcase"
+        ]
+      }
+    }
   }
 }
