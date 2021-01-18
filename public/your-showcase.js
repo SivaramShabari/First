@@ -17,7 +17,7 @@ let uid;
 let auth = firebase.auth();
 let setRef = {}
 let count = 0;
-
+let link = window.location.href;
 
 setTimeout(function() {
     uid = auth.currentUser.uid;
@@ -53,15 +53,13 @@ let db = firebase.database().ref('users');
 
 document.getElementById('links-ul').style.display = 'flex';
 
-
-// Main read db 
+//Main read db 
 db.on('value', function(snapshot) {
     document.getElementById('links-ul').style.display = 'flex';
     if (snapshot.child(uid).child('links').child('count').val() > 0 || count > 0) {
         let s = snapshot.child(uid).child('links');
         let set = {};
         // let pos = 0;
-
         if (s.child('link').exists()) {
 
             for (const link in s.child('link').val()) {
@@ -147,28 +145,7 @@ db.on('value', function(snapshot) {
             document.getElementById('links-ul').appendChild(i);
         }
 
-
-
-
-
-
-
     } else {
-        // document.getElementById('createbtn').style.display = 'flex';
-
-        // document.getElementById('create-showcase').addEventListener('click', function() {
-        //     document.getElementById('linkbtn').addEventListener('click', function() {
-        //         let _url = document.getElementById('url-input').value;
-        //         let name = document.getElementById('url-name').value;
-        //         if (validURL(_url) && name.trim() !== '') {
-
-        //             document.getElementById('createbtn').style.display = 'none';
-        //             document.getElementById('createlink').style.display = 'none';
-        //         } else {
-        //             alerts('Please enter a valid url and name');
-        //         }
-        //     });
-        // });
         alerts("No Links in you Showcase!")
 
     }
